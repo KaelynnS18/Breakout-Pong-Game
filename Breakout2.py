@@ -1,6 +1,6 @@
 import pygame
 pygame.init()
-clock = pygame.time.clock()
+clock = pygame.time.Clock()
 
 RED = (255, 0, 0)
 BLUE = (0, 0, 255)
@@ -18,17 +18,19 @@ while running:
         if event.type == pygame.QUIT:
             running = False
 
-key_input = pygame.key.get_pressed()
-if key_input [pygame.K_LEFT]:
-    paddle_x -= paddlemove
-if key_input [pygame.K_RIGHT]:
-    paddle_y += paddlemove
+    key_input = pygame.key.get_pressed()
+    if key_input [pygame.K_LEFT]:
+        paddle_x -= paddlemove
+    if key_input [pygame.K_RIGHT]:
+        paddle_y += paddlemove
 
-screen.fill(BLACK)
+    screen.fill(BLACK)
 
-paddle = pygame.draw.rect(screen, RED, (paddle_x, paddle_y, 50, 40))
+    paddle = pygame.draw.rect(screen, RED, (paddle_x, paddle_y, 50, 40))
 
-ball = pygame.draw.circle(screen, (BLUE), [650, 325], 15)
+    ball = pygame.draw.circle(screen, (BLUE), [650, 325], 15)
 
-pygame.display.update()
-clock.tick(50)
+#add ball movement, and walls
+
+    pygame.display.update()
+    clock.tick(50)
